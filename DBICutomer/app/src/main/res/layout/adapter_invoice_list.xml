@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/selector_item_3"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/invoice_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="left|center"
+            android:maxLines="1"
+            android:text="@string/invoice_number"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invoice_number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:text="@string/store_name" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxLines="1"
+        android:text="@string/date"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <RelativeLayout
+        android:id="@+id/rv_rupees"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/invoice_fa_angle_right"
+        android:layout_toStartOf="@+id/invoice_fa_angle_right"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fa_rupee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_amount"
+            android:layout_alignBottom="@+id/tv_amount"
+            android:gravity="center"
+            android:text="@string/fa_rupee"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@+id/fa_rupee"
+            android:layout_toRightOf="@+id/fa_rupee"
+            android:gravity="center"
+            android:text="@string/money"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fa_rupee"
+            android:gravity="center|bottom"
+            android:text="@string/pending" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/invoice_fa_angle_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/fa_angle_right"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/orange" />
+
+</RelativeLayout>
+

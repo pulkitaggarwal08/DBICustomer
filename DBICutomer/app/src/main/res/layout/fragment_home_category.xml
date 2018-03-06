@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/karyana_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@color/green"-->
+    <!--android:gravity="center"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <!--app:popupTheme="@style/MyDarkToolbarStyle">-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/sp_country_names"-->
+    <!--android:layout_width="180dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/white"-->
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <!--app:popupTheme="@style/MySpinnerStyle" />-->
+
+    <!--<com.miguelcatalan.materialsearchview.MaterialSearchView-->
+    <!--android:id="@+id/search_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <RelativeLayout
+        android:id="@+id/rv_home_category_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/registered_stores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="10dp"
+            android:text="Registered Stores in selected Area" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/text_or"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="or"-->
+        <!--android:visibility="invisible" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/text_find_stores_nearby"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/text_or"-->
+        <!--android:gravity="center"-->
+        <!--android:maxLines="2"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="Find Stores nearby"-->
+        <!--android:visibility="invisible" />-->
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:src="@drawable/location_1"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/simple_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/rv_home_category_list"
+        android:background="@color/light_grey" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_category_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/simple_line"
+        android:layout_marginTop="10dp" />
+
+    <ProgressBar
+        android:id="@+id/home_category_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

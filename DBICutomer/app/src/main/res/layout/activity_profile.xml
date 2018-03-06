@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/green"
+        android:gravity="center"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/MyDarkToolbarStyle">
+
+        <TextView
+            android:id="@+id/toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/my_profile"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_profile_toolbar"
+        android:background="@color/white"
+        tools:context=".activities.RegisterActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:contentDescription="@null"
+                android:src="@drawable/user"
+                app:civ_border_color="@color/green"
+                app:civ_border_width="2dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/username_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_user_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="FullName"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal">
+
+                <!--<TextView-->
+                <!--android:id="@+id/username_font_icon"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/fa_user_o"-->
+                <!--android:textColor="@color/green"-->
+                <!--android:textSize="24sp" />-->
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rectangle_background"
+                    android:hint="@string/username"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="20dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/email_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Email"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal">
+
+                <!--<TextView
+                    android:id="@+id/email_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />-->
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rectangle_background"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="20dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/phone_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_phone"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Phone"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal">
+
+                <!--<TextView
+                    android:id="@+id/phone_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_phone"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />-->
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rectangle_background"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="20dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/gst_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_gst"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="GST Number"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <!--<TextView
+                    android:id="@+id/email_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />-->
+
+                <EditText
+                    android:id="@+id/et_gst_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rectangle_background"
+                    android:enabled="false"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="5dp"
+                    android:paddingStart="20dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/medium_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/country_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_globe"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="Country"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!--<TextView
+                    android:id="@+id/email_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />-->
+
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_country"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/rectangle_background"-->
+                <!--android:enabled="true"-->
+                <!--android:hint="@string/country"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:paddingEnd="5dp"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="5dp"-->
+                <!--android:paddingStart="20dp"-->
+                <!--android:shadowColor="@color/orange"-->
+                <!--android:textColor="@color/medium_grey" />-->
+
+                <Spinner
+                    android:id="@+id/sp_countries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_background"
+                    android:hint="@string/country"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/medium_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/state_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_state"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="State"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!--<TextView
+                    android:id="@+id/email_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_state"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/rectangle_background"-->
+                <!--android:enabled="true"-->
+                <!--android:hint="@string/state"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:paddingEnd="5dp"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="5dp"-->
+                <!--android:paddingStart="20dp"-->
+                <!--android:shadowColor="@color/orange"-->
+                <!--android:textColor="@color/medium_grey" />-->
+                <Spinner
+                    android:id="@+id/sp_states"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_background"
+                    android:hint="@string/state"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/medium_grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/city_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_city"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:text="City"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!--<TextView
+                    android:id="@+id/email_font_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fa_envelope_o"
+                    android:textColor="@color/green"
+                    android:textSize="24sp" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_city"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/rectangle_background"-->
+                <!--android:enabled="true"-->
+                <!--android:hint="@string/city"-->
+                <!--android:inputType="textEmailAddress"-->
+                <!--android:paddingEnd="5dp"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="5dp"-->
+                <!--android:paddingStart="20dp"-->
+                <!--android:shadowColor="@color/orange"-->
+                <!--android:textColor="@color/medium_grey" />-->
+                <Spinner
+                    android:id="@+id/sp_cities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_background"
+                    android:hint="@string/city"
+                    android:inputType="textEmailAddress"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:shadowColor="@color/orange"
+                    android:textColor="@color/medium_grey" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/update_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rounded_background"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:textColor="@color/orange"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

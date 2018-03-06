@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dbicustomer.com.agicon.dbi.dbicutomer">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:theme="@style/SplashAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.SignInActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".activities.PushInvoiceActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.CustomerQrCodeActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ScanActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ScanListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.InvoiceActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.InvoiceListInfoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.PendingPushInvoiceActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.GetAllShoppingListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".activities.ForgotPassword"
+            android:theme="@style/AppTheme" />
+
+    </application>
+
+</manifest>
